@@ -1,0 +1,94 @@
+:root {
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+    --size-advice: 28px;    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: var(--Dark-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    max-width: 30rem;
+}
+
+.wrapper {
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--Dark-Grayish-Blue);
+    border-radius: 15px;
+}
+
+.advice-num {
+    color: var(--Neon-Green);
+    font-size: 10px;
+    letter-spacing: .2rem;
+}
+
+.advice {
+    font-size: var(--size-advice);
+    color: var(--Light-Cyan);
+    text-align: center;
+}
+
+.divider-mobile,
+.divider-desktop {
+    margin-bottom: 2rem;
+}
+
+.divider-mobile {
+    display: none;
+}
+
+.generate {
+    position: absolute;
+    top: 90%;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    background-color: var(--Neon-Green);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.generate:hover {
+    box-shadow: 0 0 2.5rem var(--Neon-Green);
+    transition: .2s;
+}
+
+.generate:active {
+    transform: scale(.9);
+    transition: .2s;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 20rem;
+    }
+    .divider-mobile {
+        display: block;
+    }
+    .divider-desktop {
+        display: none;
+    }
+}
